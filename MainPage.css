@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: #181818;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+body.hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+body.hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: absolute;   /* floats over hero */
+    top: 2rem;
+    left: 2rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.2rem ;
+
+    background: transparent;
+    z-index: 1000;
+    transition: all 0.1s ease;
+}
+
+.navbar.scrolled {
+    top: 0;
+    position: fixed;
+}
+
+.navbar input
+{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    outline: none;
+    flex: 0 1 300px;
+    max-width: 300px;
+}
+
+.navbar input::placeholder
+{
+    color: #888;
+}
+
+.navbar a
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.navbar a:hover
+{
+    color: #991b1b;
+}
+
+/* HERO */
+.hero-section {
+    margin: 2rem;
+    min-height: 600px;
+    height: calc(100vh - 4rem);
+    background: url('heroImage.png') center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 8px 8px 15px 5px black;
+    border: 1px solid rgb(29, 24, 24);
+    border-radius: 20px;
+}
+
+
+/* TEXT CONTENT */
+.description {
+    max-width: 600px;
+    color: #fff;
+    padding: 0 3rem 3rem;
+    margin-top: 2rem;
+}
+
+.head-text {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.text-span {
+    color: #991b1b;
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+/* BUTTONS */
+.description div:last-child {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.description button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.description button:first-child {
+    background: #991b1b;
+    color: #fff;
+}
+
+.description button:first-child:hover {
+    background: #991b1b;
+    transform: scale(1.05);
+}
+
+.description button:last-child {
+    background: transparent;
+    color: #991b1b;
+    border: 2px solid #991b1b;
+}
+
+.description button:last-child:hover {
+    background: #991b1b;
+    color: #fff;
+}
+
+/* ------------------------------- */
+/* Weakly Top Songs */
+
+.weekly-section
+{
+    margin: 0 3rem;
+}
+
+.sub-head-text
+{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.music-card-list
+{
+    display: flex;
+}
+
+.music-card
+{
+    height: 14rem;
+    width: 11rem;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card-img img
+{
+    height: 9.3rem;
+    width: 9rem;   
+}
+
+.music-card h4, p
+{
+    color: #fff;
+}
+
+.music-card p
+{
+    margin-top: 6px;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
