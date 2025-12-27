@@ -1,0 +1,281 @@
+/* =========================
+   GLASS THEME VARIABLES
+========================= */
+:root {
+    --glass-bg: rgba(139, 0, 0, 0.25);
+    --glass-border: rgba(220, 38, 38, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.5);
+    --accent-color: #991b1b;
+    --accent-hover: #7f1d1d;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --glass-blur: 20px;
+    --glow-color: rgba(153, 27, 27, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.main-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #450a0a 100%);
+}
+
+.left-panel {
+    position: relative;
+    flex-shrink: 0;
+    z-index: 10;
+    width: 260px;
+    min-width: 6rem;
+    max-width: 22.5rem;
+    height: 100vh;
+    padding: 1.875rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+
+    border-right: 1px solid var(--glass-border);
+
+    box-shadow:
+        4px 0 30px var(--glass-shadow),
+        inset 0 0 60px rgba(153, 27, 27, 0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: clamp(0.8rem, 0.9vw, 1.05rem);
+    transition: width 0.08s ease;
+}
+
+
+.navbar1-title {
+    font-size: clamp(1.1rem, 1.4vw, 1.6rem);
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+    color: var(--text-primary);
+    text-shadow: 0 0 15px var(--glow-color);
+}
+
+
+.navbar1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.navbar1-menu,
+.navbar1-general {
+    list-style: none;
+}
+
+.navbar1-link {
+    height: 3.75rem;
+    border-radius: 0.938rem;
+}
+
+.navbar1-menu li,
+.navbar1-general li {
+    margin-bottom: 1.875rem;
+}
+
+
+.navbar1-nav2 {
+    margin-top: auto;
+}
+
+.navbar1-link {
+    display: flex;
+    align-items: center;
+    gap: 2.125rem;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    color: var(--text-secondary);
+    transition: all 0.25s ease;
+
+}
+
+.navbar1-link:hover {
+    color: var(--text-primary);
+
+    background: rgba(153, 27, 27, 0.25);
+    box-shadow:
+        inset 0 0 20px rgba(220, 38, 38, 0.25),
+        0 0 18px rgba(220, 38, 38, 0.25);
+}
+
+
+.navbar1-icon {
+    font-size: 30px;
+    min-width: 1.5rem;
+    text-align: center;
+    transition: margin 0.2s ease;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar1-link:hover .navbar1-icon {
+    color: var(--text-primary);
+}
+
+/* =========================
+   COLLAPSED STATE
+========================= */
+.left-panel.collapsed {
+    width: 6rem !important;
+}
+
+.left-panel.collapsed .navbar1-link {
+    justify-content: center;
+    gap: 0;
+}
+
+.left-panel.collapsed .navbar1-link span {
+    display: none;
+}
+
+.left-panel.collapsed .navbar1-title {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.navbar1-title .short-title {
+    display: none;
+}
+
+.left-panel.collapsed .navbar1-title .full-title {
+    display: none;
+}
+
+.left-panel.collapsed .navbar1-title .short-title {
+    display: inline;
+}
+
+/* =========================
+   RESIZE HANDLE
+========================= */
+.resize-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    cursor: ew-resize;
+    z-index: 9999;
+}
+
+
+.resize-handle:hover {
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(220, 38, 38, 0.35),
+            transparent);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------Hero card------------------------------*/
+
+.center {
+    display: flex;
+    flex: 1;
+    gap: 50px;
+}
+
+.hero {
+    background-color: rgb(88, 138, 231);
+    display: flex;
+    height: 50vh;
+    width: 100vw;
+}
+
+.navigation {
+    font-size: 30px;
+    padding: 35px;
+    color: white;
+}
+
+.hero-card {
+    font-size: 2.188rem;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    width: 15.625rem;
+    height: 15.625rem;
+    border-radius: 0.625rem;
+    margin: 140px 95px 0px 0px;
+    box-shadow: 6px 9px 20px 0px #221d1d;
+    overflow: hidden;
+    background-color: rgb(104, 211, 211);
+}
+
+.hero-card span {
+    color: #221d1d;
+
+}
+
+.hero-img {
+    position: relative;
+    bottom: 20px;
+    left: 45px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transform: rotate(-8deg);
+
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 71rem;
+    height: 15.625rem;
+    margin-top: 140px;
+}
+
+.hero-meta {
+    gap: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-info {
+    display: flex;
+    gap: 8.75rem;
+}
+
+.hero-play {
+    padding: 10px;
+    height: 40px;
+}
+
+.fa-circle-play {
+    font-size: 4.375rem;
+    color: white;
+}
