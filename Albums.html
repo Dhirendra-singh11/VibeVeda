@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibeVeda|Albums</title>
-    <link rel="stylesheet" href="static/Albums.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VibeVeda | Albums</title>
 
+    <link rel="stylesheet" href="static/Albums.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -49,29 +47,270 @@
             </div>
             <div class="resize-handle"></div>
         </div>
-        <div class="center">
-            <div class="hero">
-                <i class="navigation fa-solid fa-arrow-left"></i>
-                <div class="hero-card">
-                    <span>Trending Music</span>
-                    <img class="hero-img" src="assets/listening.png" alt="listening"/>
-                </div>
-                <div class="hero-title">
-                    <h3>Tranding songs <span>mix</span></h3>
-                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia dolorum accusamus
-                        consectetur.</span>
-                    <div class="hero-meta">
-                        <div class="hero-info">
-                            <span>20Songs</span>
-                            <span>1h 36m</span>
+
+        <!-- CENTER -->
+        <main class="center">
+            
+            <!-- HERO -->
+            <section class="hero">
+                <div class="hero-top">
+                    <i class="fa-solid fa-arrow-left back"></i>
+                    <nav>
+                        <button id="nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                        <div id="nav-links">
+                                <a href="">Share</a>
+                                <a href="">About</a>
+                                <a href="">Premium</a>
+                                <button id="nav-btn"><i class="fa-regular fa-circle-user"></i></button>
+                            </div>
+                        </nav>
+                    <div class="hero-content">
+                        <div class="hero-card">
+                            <span>TRENDING MUSIC</span>
+                            <img src="assets/listening.png" alt="cover" />
                         </div>
-                        <div class="hero-play">
-                            <i class="fa-regular fa-circle-play"></i>
+
+                        <div class="hero-text">
+                            <h1>Trending songs <span>mix</span></h1>
+                            <p>tate mcrae, nightmares, the neighbourhood, doja cat and more...</p>
+
+                            <div class="hero-meta">
+                                <span>20 songs</span>
+                                <span>•</span>
+                                <span>1h 36m</span>
+                                <button class="play-all">
+                            Play All <i class="fa-solid fa-play"></i>
+                        </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+            </section>
+
+            <div class="table-head">
+                <span>#</span>
+                <span>Title</span>
+                <span>Release Date</span>
+                <span>Album</span>
+                <span>Time</span>
+            </div>
+
+            <section class="song-list">
+
+                <div class="song-row">
+                    <span>1</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Sorfcore</strong>
+                            <p>The Neighbourhood</p>
                         </div>
                     </div>
+                    <span>Nov 4, 2023</span>
+                    <span>Hard to Imagine Neighbourhood Ever Changing</span>
+                    <span><i class="fa-regular fa-heart"></i> 3:26</span>
                 </div>
-            </div>
-        </div>
+                <div class="song-row">
+                    <span>2</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Skyfall Beats</strong>
+                            <p>Nightmares</p>
+                        </div>
+                    </div>
+                    <span>Oct 26, 2023</span>
+                    <span>Nightmares</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:45</span>
+                </div>
+
+                <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+                 <div class="song-row">
+                    <span>3</span>
+                    <div class="song-info">
+                        <img src="assets/Frame 185.png" />
+                        <div>
+                            <strong>Greedy</strong>
+                            <p>Tate McRae</p>
+                        </div>
+                    </div>
+                    <span>Nov 30, 2023</span>
+                    <span>Greedy</span>
+                    <span><i class="fa-regular fa-heart"></i> 2:11</span>
+                </div>
+
+            </section>
+
+        </main>
     </div>
 </body>
 

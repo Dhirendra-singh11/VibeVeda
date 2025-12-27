@@ -13,11 +13,15 @@
     --glow-color: rgba(153, 27, 27, 0.6);
 }
 
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
+    scrollbar-width: none;
 }
 
 html,
@@ -34,8 +38,15 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #450a0a 100%);
+    background: linear-gradient(179deg, #3d7071 0%, #0f363c 50%, #0e0b2e 100%);
 }
+
+/* =========================
+   LEFT PANEL (Resizable)
+========================= */
+/* =========================
+   LEFT PANEL – SAME AS RIGHT PANEL
+========================= */
 
 .left-panel {
     position: relative;
@@ -46,6 +57,8 @@ body {
     max-width: 22.5rem;
     height: 100vh;
     padding: 1.875rem;
+
+    /* EXACT SAME GLASS STYLE */
     background: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
@@ -59,7 +72,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    font-size: clamp(0.8rem, 0.9vw, 1.05rem);
+    font-size: clamp(0.8rem, 0.9vw, 2.05rem);
     transition: width 0.08s ease;
 }
 
@@ -190,92 +203,168 @@ body {
             transparent);
 }
 
-
-
-
-
-
-
-
-
-
-
-/*-------------------------------Hero card------------------------------*/
-
+/* CENTER */
 .center {
-    display: flex;
     flex: 1;
-    gap: 50px;
+    overflow-y: auto;
 }
 
+/* HERO */
 .hero {
-    background-color: rgb(88, 138, 231);
-    display: flex;
-    height: 50vh;
-    width: 100vw;
+    background: linear-gradient(352deg, #133139, #4fa3d7);
+    padding: 32px 48px;
+    box-shadow: 7px 20px 20px 14px #25393a;
 }
 
-.navigation {
-    font-size: 30px;
-    padding: 35px;
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-arrow-left{
+    position: relative;
+    bottom:141px;
     color: white;
+    font-size: 40px
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    border-radius: 10px 10px 0 0;
+}
+
+#nav-btn
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#nav-btn i
+{
+    color: white;
+    font-size: 1.8rem;
+}
+
+#nav-links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-links a
+{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 5rem;
+    font-size: 2.063rem;
+}
+
+.hero-content {
+        position: relative;
+    right: 820px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
 }
 
 .hero-card {
-    font-size: 2.188rem;
-    font-weight: bold;
-    font-family: 'Inter', sans-serif;
-    width: 15.625rem;
-    height: 15.625rem;
-    border-radius: 0.625rem;
-    margin: 140px 95px 0px 0px;
-    box-shadow: 6px 9px 20px 0px #221d1d;
+    width: 240px;
+    height: 240px;
+    background: #38bdf8;
+    border-radius: 16px;
+    padding: 16px;
     overflow: hidden;
-    background-color: rgb(104, 211, 211);
 }
 
 .hero-card span {
-    color: #221d1d;
-
+    font-weight: 900;
+    font-size: 35px;
+    color: white;
 }
 
-.hero-img {
-    position: relative;
-    bottom: 20px;
-    left: 45px;
-    height: 100%;
+.hero-card img {
     width: 100%;
-    object-fit: contain;
+    position: relative;
+    left: 47px;
+    bottom: 75px;
     transform: rotate(-8deg);
-
 }
 
-.hero-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 71rem;
-    height: 15.625rem;
-    margin-top: 140px;
+.hero-text h1 span {
+    color: #38bdf8;
+}
+
+.hero-text p {
+    opacity: 0.8;
+    margin-top: 10px;
+    font-size: 24px;
 }
 
 .hero-meta {
-    gap: 700px;
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+.play-all {
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    background: #38bdf8;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 999px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.table-head,
+.song-row {
+    display: grid;
+    grid-template-columns: 40px 3fr 1.5fr 2.5fr 1fr;
+    padding: 16px 48px;
+    align-items: center;
+    border-bottom: 1px solid white;
+    
+}
+
+.table-head {
+    font-weight: 600;
+    font-size: 1.563rem;
+    color: white;
+}
+.song-list{
+    color: white;
+    font-size: 1.25rem;
+}
+.song-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.song-info {
     display: flex;
     align-items: center;
+    gap: 14px;
 }
 
-.hero-info {
-    display: flex;
-    gap: 8.75rem;
+.song-info img {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
 }
 
-.hero-play {
-    padding: 10px;
-    height: 40px;
-}
-
-.fa-circle-play {
-    font-size: 4.375rem;
-    color: white;
+.song-info p {
+    font-size: 0.85rem;
+    opacity: 0.7;
 }
