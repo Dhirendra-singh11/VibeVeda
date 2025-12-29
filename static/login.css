@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-panel {
+    display: flex;
+    margin-left: 2.5rem;
+    height: 100vh;
+    width: 50%;
+    gap:0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-main ,.left2,.left3{
+    position: relative;
+    display: flex;
+    width: 65%;
+    height: 91%;
+    border-radius: 1.25rem 0 0 1.25rem;
+    overflow: hidden;
+    object-fit: cover;
+
+}
+
+.left-main img {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+
+.left2 img,.left3 img{
+    width: 100%;
+    object-fit: cover;
+}
+.img-cyc{
+    inset: 0;
+    opacity: 0;
+    opacity: 0.3;
+    animation: fadeCycle 9s infinite; 
+}
+.img1{ animation-delay: 0s; }
+.img2{ animation-delay: 3s; }
+.img3{ animation-delay: 6s; }
+@keyframes fadeCycle {
+    0%   { opacity: 0.3; }
+    10%  { opacity: 1; }  
+    30%  { opacity: 1; }
+    40%  { opacity: 0.3; } 
+    100% { opacity: 0.3; }
+}
+.slogan {
+    position: absolute;
+    top: 18%;
+    left: 60px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 18.125rem;
+    height: 15.625rem;
+}
+
+
+
+.slogan-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.25rem;
+}
+
+.banner-text {
+    position: absolute;
+    margin-top: 45px;
+    font-size: 16px;
+    word-spacing: 12px;
+    width: 215px;
+    text-align: left;
+    left: 62%;
+
+}
+
+.logo {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+}
+
+
+
+.right-main {
+    width: 50%;
+    height: 70%;
+}
+
+.main-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+}
+
+.sub-heading {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin-bottom: 45px;
+}
+
+.login-container {
+    font-family: "Poppins", sans-serif;
+}
+
+input::placeholder {
+    font-family: "Poppins", sans-serif;
+    padding-left: 15px;
+    ;
+}
+
+.field {
+    margin-bottom: 25px;
+    padding: 5px;
+    width: 420px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.CheckRem {
+    font-size: 14px;
+    display: flex;
+    gap: 80px
+}
+
+.RememberMe {
+    padding-left: 5px;
+}
+
+.forgot-btn,
+.signup-btn {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    padding-left: 3px;
+}
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+    border-radius: 10px;
+    width: 420px;
+    background-color: black;
+    height: 50px;
+}
+
+.signin-btn {
+    text-decoration: none;
+    color: white;
+}
+
+.signup-container {
+    position: absolute;
+    right: 20%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-lower {
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+    margin-top: 50px;
+    display: flex;
+    gap: 60px
+}
+
+.ext-loginlink {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: #80808061;
+}
+
+.fa-brands {
+    font-size: 30px;
+    color: white
+}
+
+.google:hover {
+    transition: ease-in 0.4s;
+    background-color: red
+}
+
+.facebook:hover {
+    transition: ease-in 0.4s;
+    background-color: #1877f2;
+
+}
+
+.X-twitter:hover {
+    transition: ease-in 0.4s;
+    background-color: #000;
+}
