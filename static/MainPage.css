@@ -14,7 +14,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Chrome, Edge, Safari */
 body::-webkit-scrollbar {
     width: 6px;
 }
@@ -23,10 +22,9 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-/* Hidden by default */
 body::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0);
-    border-radius: 12px;
+    border-radius: 0.75rem;
     border: 3px solid transparent;
     background-clip: padding-box;
 
@@ -35,18 +33,15 @@ body::-webkit-scrollbar-thumb {
         border 0.35s ease;
 }
 
-/* Visible while scrolling */
 body.scrolling::-webkit-scrollbar-thumb {
     background: #991b1b;
 }
 
-/* NAVBAR */
 .navbar {
-    position: absolute;   /* floats over hero */
+    position: absolute;
     top: 2rem;
     left: 2rem;
     right: 2rem;
-    /* width: 100%; */
 
     display: flex;
     align-items: center;
@@ -67,7 +62,7 @@ body.scrolling::-webkit-scrollbar-thumb {
     left: 0;
     width: 100%;
 
-    background: rgba(24, 24, 24, 0.6); /* glass tint */
+    background: rgba(24, 24, 24, 0.6);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
@@ -78,12 +73,12 @@ body.scrolling::-webkit-scrollbar-thumb {
 .navbar input
 {
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     border: 1px solid #333;
     color: #fff;
     outline: none;
-    flex: 0 1 300px;
-    max-width: 300px;
+    flex: 0 1 18.75rem;
+    max-width: 18.75rem;
     background-color: rgba(42, 42, 42, 0.8);
     border-color: rgba(255, 255, 255, 0.15);
 }
@@ -107,23 +102,22 @@ body.scrolling::-webkit-scrollbar-thumb {
     color: #991b1b;
 }
 
-/* HERO */
 .hero-section {
     margin: 2rem;
-    min-height: 600px;
+    min-height: 37.5rem;
     height: calc(100vh - 4rem);
     background: url('assets/heroImage.png') center / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 8px 8px 15px 5px black;
+    box-shadow: 0.5rem 0.5rem 1rem 5px black;
     border: 1px solid rgb(29, 24, 24);
     border-radius: 20px;
 }
 
 /* TEXT CONTENT */
 .description {
-    max-width: 600px;
+    max-width: 37.5rem;
     color: #fff;
     padding: 0 3rem 3rem;
     margin-top: 2rem;
@@ -148,7 +142,6 @@ body.scrolling::-webkit-scrollbar-thumb {
     color: #e0e0e0;
 }
 
-/* BUTTONS */
 .description div:last-child {
     display: flex;
     gap: 1rem;
@@ -158,7 +151,7 @@ body.scrolling::-webkit-scrollbar-thumb {
 .description button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
-    border-radius: 25px;
+    border-radius: 1.563rem;
     border: none;
     cursor: pointer;
     font-weight: 600;
@@ -289,7 +282,7 @@ body.scrolling::-webkit-scrollbar-thumb {
     content: "";
     position: absolute;
     top: 0;
-    width: 70px;
+    width: 4.375rem;
     height: 100%;
     pointer-events: none;
     opacity: 0;
@@ -323,8 +316,8 @@ body.scrolling::-webkit-scrollbar-thumb {
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    width: 42px;
-    height: 42px;
+    width: 2.625rem;
+    height: 2.625rem;
     border-radius: 50%;
     cursor: pointer;
     z-index: 5;
@@ -388,11 +381,10 @@ body.scrolling::-webkit-scrollbar-thumb {
     color: #ff2fb3;
 }
 
-/* Header Row */
 .trending-header {
     display: grid;
-    grid-template-columns: 120px 230px 200px 1fr 120px;
-    margin: 2rem 24px 1rem 36px;
+    grid-template-columns: 7.5rem 14.375rem 12.5rem 1fr 7.5rem;
+    margin: 2rem 1.5rem 1rem 2.25rem;
     font-size: 1rem;
     color: #fff;
     align-items: center;
@@ -407,17 +399,15 @@ body.scrolling::-webkit-scrollbar-thumb {
     text-align: right;
 }
 
-/* Song List */
 .trending-list {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-/* Song Row */
 .song-row {
     display: grid;
-    grid-template-columns: 60px 300px 200px 1fr 120px;
+    grid-template-columns: 3.75rem 18.75rem 12.5rem 1fr 7.5rem;
     align-items: center;
     background: linear-gradient(
         90deg,
@@ -442,9 +432,9 @@ body.scrolling::-webkit-scrollbar-thumb {
 }
 
 .song-info img {
-    width: 55px;
-    height: 55px;
-    border-radius: 8px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
     object-fit: cover;
 }
 
@@ -458,14 +448,12 @@ body.scrolling::-webkit-scrollbar-thumb {
     color: #aaa;
 }
 
-/* Release Date & Album */
 .release-date,
 .album {
     font-size: 1.5rem;
     color: #e0e0e0;
 }
 
-/* Time & Heart */
 .time {
     display: flex;
     align-items: center;
@@ -483,7 +471,6 @@ body.scrolling::-webkit-scrollbar-thumb {
     font-size: 1.5rem;
 }
 
-/* View All Button */
 .view-all-btn {
     margin: 3rem auto 0;
     display: block;
@@ -501,13 +488,6 @@ body.scrolling::-webkit-scrollbar-thumb {
 }
 
 /* ---------------------------------------------- */
-/* .artist-card-list {
-    display: flex;
-    gap: 2rem;
-    overflow-x: auto;
-    padding: 0 1rem;
-    scroll-behavior: smooth;
-} */
 
 .artist-card
 {

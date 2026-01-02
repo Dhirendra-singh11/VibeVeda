@@ -1,0 +1,601 @@
+:root {
+  --glass-bg: rgba(139, 0, 0, 0.25);
+  --glass-border: rgba(220, 38, 38, 0.3);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
+  --accent-color: #991b1b;
+  --accent-hover: #7f1d1d;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --glass-blur: 20px;
+  --glow-color: rgba(153, 27, 27, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(to bottom, #282828 0%, #000 100%);;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* LEFT PANEL (Resizable) */
+
+.left-panel {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 10;
+  width: 16rem;
+  min-width: 6rem;
+  max-width: 19rem;
+  height: 100vh;
+  padding: 1.875rem;
+
+  /* EXACT SAME GLASS STYLE */
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+
+  border-right: 1px solid var(--glass-border);
+
+  box-shadow: 4px 0 30px var(--glass-shadow),
+    inset 0 0 60px rgba(153, 27, 27, 0.1);
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(0.8rem, 0.9vw, 2.05rem);
+  transition: width 0.08s ease;
+}
+
+.navbar1-title {
+  font-size: clamp(1.1rem, 1.4vw, 1.6rem);
+  margin-bottom: 2.5rem;
+  white-space: nowrap;
+  color: var(--text-primary);
+  text-shadow: 0 0 15px var(--glow-color);
+}
+
+.navbar1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.navbar1-menu,
+.navbar1-general {
+  list-style: none;
+}
+
+.navbar1-link {
+  height: 3.75rem;
+  border-radius: 0.938rem;
+}
+
+.navbar1-menu li,
+.navbar1-general li {
+  margin-bottom: 1.875rem;
+}
+
+.navbar1-nav2 {
+  margin-top: auto;
+}
+
+.navbar1-link {
+  display: flex;
+  align-items: center;
+  gap: 2.125rem;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+}
+
+.navbar1-link:hover {
+  color: var(--text-primary);
+
+  background: rgba(153, 27, 27, 0.25);
+  box-shadow: inset 0 0 20px rgba(220, 38, 38, 0.25),
+  0 0 18px rgba(220, 38, 38, 0.25);
+}
+
+.navbar1-icon {
+  font-size: 30px;
+  min-width: 1.5rem;
+  text-align: center;
+  transition: margin 0.2s ease;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar1-link:hover .navbar1-icon {
+  color: var(--text-primary);
+}
+
+/* COLLAPSED STATE */
+.left-panel.collapsed {
+  width: 6rem !important;
+}
+
+.left-panel.collapsed .navbar1-link {
+  justify-content: center;
+  gap: 0;
+}
+
+.left-panel.collapsed .navbar1-link span {
+  display: none;
+}
+
+.left-panel.collapsed .navbar1-title {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.navbar1-title .short-title {
+  display: none;
+}
+
+.left-panel.collapsed .navbar1-title .full-title {
+  display: none;
+}
+
+.left-panel.collapsed .navbar1-title .short-title {
+  display: inline;
+}
+
+/* RESIZE HANDLE */
+.resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  cursor: ew-resize;
+  z-index: 9999;
+}
+
+.resize-handle:hover {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(220, 38, 38, 0.35),
+    transparent
+  );
+}
+
+/* ---------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --------------------------------------------------- */
+/* Music Genres */
+
+.text-span {
+  color: #991b1b;
+}
+
+.section-size {
+  margin: 4rem 3rem 2rem 3rem;
+}
+
+.sub-head-text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.music-card-list {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+}
+
+.music-card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.music-card-music-genre {
+  height: 10rem;
+  width: 14rem;
+  min-width: 14rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: #1f1f1f;
+}
+
+.genre-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.genre-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.music-card-music-genre:hover img {
+  filter: brightness(0.7);
+}
+
+.music-card-music-genre .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  transition: 0.25s ease;
+  font-size: 2.2rem;
+  color: #991b1b;
+}
+
+.music-card-music-genre:hover .play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.music-card {
+  height: 14rem;
+  width: 11rem;
+  min-width: 11rem;
+  flex-shrink: 0;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-img {
+  position: relative;
+}
+
+.card-img img {
+  height: 9.3rem;
+  width: 9rem;
+}
+
+.music-card h4,
+p {
+  color: #fff;
+}
+
+.music-card p {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+
+  color: #991b1b;
+  font-size: 2.2rem;
+
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  pointer-events: none;
+}
+
+.music-card-music-genre:hover .play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.music-card:hover .play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.music-card img {
+  transition: filter 0.25s ease;
+}
+
+.music-card:hover img {
+  filter: brightness(0.7);
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper::before,
+.slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 4;
+}
+
+.slider-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #181818, transparent);
+}
+
+.slider-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #181818, transparent);
+}
+
+.slider-wrapper.show-left-fade::before {
+  opacity: 1;
+}
+
+.slider-wrapper.show-right-fade::after {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.arrow-fa {
+  font-size: 2.5rem;
+  color: #333;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.arrow:hover .arrow-fa {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.arrow:hover .arrow-icon {
+  fill: #fff;
+}
+
+.arrow.right .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.slider-wrapper:hover .arrow:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arrow.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.arrow.left {
+  left: 10px;
+}
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: #333;
+}
+
+/* ------------------------------------------------------- */
+/* MOOD PLAYLIST CARD */
+.mood-card {
+  width: 11rem;
+  height: 12.25rem;
+  min-width: 11rem;
+  background: #1f1f1f;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mood-img {
+  position: relative;
+  width: 100%;
+  height: 9.375rem;
+  overflow: hidden;
+}
+
+.mood-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.25s ease;
+}
+
+.mood-card h4 {
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.mood-card:hover img {
+  filter: brightness(0.7);
+}
+
+.mood-card .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  font-size: 2.2rem;
+  color: #991b1b;
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.mood-card:hover .play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ------------------------------------------------------- */
+/* Popular Artists */
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.artist-card-img img {
+  height: 11rem;
+  width: 11rem;
+  border-radius: 50%;
+  border: 1px solid rgb(135, 133, 133);
+}
+
+.artist-card h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.artist-card img {
+  transition: filter 0.25s ease;
+}
+
+.artist-card:hover img {
+  filter: brightness(0.7);
+}
+
+.artist-card-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------------------- */
+/* MUSIC VIDEO CARD (POSTER STYLE) */
+
+.video-card {
+  width: 19rem;
+  height: 15rem;
+  min-width: 19rem;
+  flex: 0 0 19rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #1f1f1f;
+  cursor: pointer;
+}
+
+.video-thumb {
+  position: relative;
+  height: 11.25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-card:hover img {
+  filter: brightness(0.7);
+}
+
+.video-info {
+  padding: 10px 14px;
+  background: #1f1f1f;
+}
+
+.video-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.video-info p {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #cfcfcf;
+}
+
+.video-card .play-icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+
+  width: 3rem;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.6rem;
+  color: #fff;
+
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+.video-card:hover .play-icon {
+  opacity: 1;
+  transform: scale(1);
+}

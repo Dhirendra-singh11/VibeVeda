@@ -65,7 +65,7 @@
 .slogan {
     position: absolute;
     top: 18%;
-    left: 60px;
+    left: 3.75rem;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
@@ -83,10 +83,10 @@
 
 .banner-text {
     position: absolute;
-    margin-top: 45px;
-    font-size: 16px;
-    word-spacing: 12px;
-    width: 215px;
+    margin-top: 2.813rem;
+    font-size: 1rem;
+    word-spacing: 0.75rem;
+    width: 13.438rem;
     text-align: left;
     left: 62%;
 
@@ -96,9 +96,9 @@
     position: absolute;
     bottom: 5%;
     left: 5%;
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
+    height: 3.125rem;
+    width: 3.125rem;
+    border: 0.063rem solid black;
     border-radius: 100%;
 }
 
@@ -119,42 +119,42 @@
 
 .main-heading {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
+    font-size: 3.125rem;
 }
 
 .sub-heading {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    margin-bottom: 45px;
+    margin-bottom: 2.813rem;
 }
 
 .login-container {
     font-family: "Poppins", sans-serif;
 }
-
 input::placeholder {
     font-family: "Poppins", sans-serif;
-    padding-left: 15px;
+
+    padding-left: 0.938rem;
     ;
 }
 
 .field {
-    margin-bottom: 25px;
-    padding: 5px;
-    width: 420px;
-    height: 50px;
-    border: 1px solid grey;
-    border-radius: 10px;
+    margin-bottom: 1.563rem;
+    padding: 0.313rem;
+    width: 26.25rem;
+    height: 3.125rem;
+    border: 0.063rem solid grey;
+    border-radius: 0.625rem;
 }
 
 .CheckRem {
-    font-size: 14px;
+    font-size: 0.875rem;
     display: flex;
-    gap: 80px
+    gap: 5rem;
 }
 
 .RememberMe {
-    padding-left: 5px;
+    padding-left: 0.313rem;
 }
 
 .forgot-btn,
@@ -162,18 +162,18 @@ input::placeholder {
     text-decoration: none;
     font-weight: 600;
     color: black;
-    padding-left: 3px;
+    padding-left: 0.188rem;
 }
 
 .signin-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 55px;
-    border-radius: 10px;
-    width: 420px;
+    margin-top: 3.438rem;
+    border-radius: 0.625rem;
+    width: 26.25rem;
     background-color: black;
-    height: 50px;
+    height: 3.125rem;
 }
 
 .signin-btn {
@@ -184,7 +184,7 @@ input::placeholder {
 .signup-container {
     position: absolute;
     right: 20%;
-    margin-top: 30px;
+    margin-top: 1.875rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,9 +194,9 @@ input::placeholder {
     position: absolute;
     right: 20%;
     bottom: 15%;
-    margin-top: 50px;
+    margin-top: 3.125rem;
     display: flex;
-    gap: 60px
+    gap: 3.75rem;
 }
 
 .ext-loginlink {
@@ -204,14 +204,14 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;
+    width: 3.125rem;
     border-radius: 100%;
     background-color: #80808061;
 }
 
 .fa-brands {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: white
 }
 
