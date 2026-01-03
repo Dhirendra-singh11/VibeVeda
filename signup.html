@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibeVeda|Login</title>
-    <link rel="stylesheet" href="static/login.css" />
+    <title>VibeVeda|Signup</title>
+    <link rel="stylesheet" href="static/signup.css" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -37,46 +37,39 @@
         <div class="right-panel">
             <div class="right-main">
                 <div class="greeting">
-                    <div class="main-heading">WELCOME BACK</div>
-                    <div class="sub-heading">Enter your email and password to access your account</div>
+                    <div class="main-heading">
+                        Get Started
+                    </div>
+                    <div class="sub-heading">Enter your details to create an account</div>
                 </div>
-                <div class="login-container">
+                <div class="signup-container">
                     <form>
+                        Username<br>
+                        <input type="text" class="field username" placeholder="Enter your username"><br>
                         Email<br>
                         <input type="email" class="field email" placeholder="Enter your email"><br>
                         Password<br>
                         <input type="password" class="field password" placeholder="Enter your password"><br>
-                        <div class="CheckRem">
-                            <div class="CR1">
-
-                                <input type="checkbox">
-                                <span class="RememberMe">Remember me</span>
-                            </div>
-                            <div class="CR2">
-
-                                <span class="ForgotPass">Forgot password?</span><a href="#" class="forgot-btn">Change
-                                    now</a>
-                            </div>
+                        Confirm Password<br>
+                        <input type="password" class="field conpassword" placeholder="re-enter your password"><br>
+                        <div class="signup-cont">
+                            <a class="signup-btn" href="#">Create Account</a>
                         </div>
                         <div class="signin-container">
-                            <a class=signin-btn href="#">Sign in</a>
+                            Already have an account? <a href="login.html" class="signin-btn">Sign in</a>
                         </div>
-
-                        <div class="signup-container">
-                            Don't have an account? <a href="signup.html" class="signup-btn">Sign up</a>
-                        </div>
-                        <div class="signin-lower">
-
-                            <div class="ext-loginlink google"><i class="fa-brands fa-google"></i></div>
-                            <div class="ext-loginlink facebook"><i class="fa-brands fa-facebook-f"></i></div>
-                            <div class="ext-loginlink X-twitter"><i class="fa-brands fa-x-twitter"></i></div>
+                        <div class="signup-lower">
+                            
+                            <div class="ext-signuplink google"><i class=" fa-brands fa-google"></i></div>
+                            <div class="ext-signuplink facebook"><i class=" fa-brands fa-facebook-f"></i></div>
+                            <div class="ext-signuplink X-twitter"><i class="fa-brands fa-x-twitter"></i></div>
+                            
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
-
-        </div>
     </div>
-</body>
 
-</html>
+    </body>
+    </html>
