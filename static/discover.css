@@ -71,7 +71,7 @@ body {
   margin-bottom: 2.5rem;
   white-space: nowrap;
   color: var(--text-primary);
-  text-shadow: 0 0 15px var(--glow-color);
+  text-shadow: 0 0 0.938rem var(--glow-color);
 }
 
 .navbar1 {
@@ -186,7 +186,7 @@ body {
 
 /* ---------------------------------------------------------------- */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0.375rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -195,7 +195,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #404040;
-  border-radius: 6px;
+  border-radius: 0.375rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -281,7 +281,7 @@ body {
   min-width: 11rem;
   flex-shrink: 0;
   background-color: #1f1f1f;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -303,7 +303,7 @@ p {
 }
 
 .music-card p {
-  margin-top: 6px;
+  margin-top: 0.375rem;
   font-size: 0.8rem;
   font-weight: 100;
 }
@@ -350,7 +350,7 @@ p {
   content: "";
   position: absolute;
   top: 0;
-  width: 70px;
+  width: 4.375rem;
   height: 100%;
   pointer-events: none;
   opacity: 0;
@@ -423,10 +423,10 @@ p {
 }
 
 .arrow.left {
-  left: 10px;
+  left: 0.625rem;
 }
 .arrow.right {
-  right: 10px;
+  right: 0.625rem;
 }
 
 .arrow:hover {
@@ -557,7 +557,7 @@ p {
 }
 
 .video-info {
-  padding: 10px 14px;
+  padding: 0.625rem 0.875rem;
   background: #1f1f1f;
 }
 
@@ -567,7 +567,7 @@ p {
 }
 
 .video-info p {
-  margin-top: 4px;
+  margin-top: 0.25rem;
   font-size: 0.85rem;
   color: #cfcfcf;
 }

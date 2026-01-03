@@ -106,7 +106,7 @@ body.scrolling::-webkit-scrollbar-thumb {
     margin: 2rem;
     min-height: 37.5rem;
     height: calc(100vh - 4rem);
-    background: url('assets/heroImage.png') center / cover no-repeat;
+    background: url("../assets/heroImage.png") center / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;

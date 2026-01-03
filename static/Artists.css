@@ -574,8 +574,8 @@ nav {
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    width: 42px;
-    height: 42px;
+    width: 2.625rem;
+    height: 2.625rem;
     border-radius: 50%;
     cursor: pointer;
     z-index: 5;
